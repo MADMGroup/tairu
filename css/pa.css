@@ -1,0 +1,140 @@
+
+/** General page styling **/
+html {
+  background-color: #fff;
+  font-family: "Segoe UI"," Open Sans";
+
+}
+
+
+
+
+/*login panel*/
+
+.start {
+  position:absolute; 
+
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.start .blockOuter {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.start .blockInner{
+  margin: 0 auto; 
+  width:250px;
+}
+
+
+#logo{
+  position:relative;
+  float:left;
+  border: 1px solid #000;
+  margin: 0 0 10px 0; 
+
+}
+
+
+input[type="email"],input[type="password"]{
+  width:92%;
+  background:#fff;
+  margin-bottom:4%;
+  border:1px solid #000;
+  padding:4%;
+  font-size:95%;
+  color:#000;
+}
+
+input[type="submit"]{
+  width:100%;
+  background:#000;
+  border:0;
+  padding:4%;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+input[type="submit"]:hover{
+  background:#3498db;
+}
+
+
+
+/*pa*/
+
+#pa{
+	position:fixed;
+ width: 150px;
+ top: 30px;
+
+ 
+	
+}
+
+.content
+{
+	position: relative;
+  width: 800px;
+  height: 1000px;
+  margin:30px 0 0 200px;
+	
+}
+
+
+.fake {
+  position: absolute;
+  left: -170px;
+}
+
+
+#logopa
+{	
+	width: 150px;
+	border: 1px solid #000;
+	 margin: 0 0 10px 0; 
+}
+
+.line
+{
+	height:3px;
+	background:#000;
+}
+
+
+.line_2
+{
+	height:3px;
+	background:#000;
+	float:right;
+	width:40px;
+	
+
+
+}
+#menu {
+	margin: 10px 5px 0 5px;	
+
+}
+
+#menu a{
+	color:#000;
+	font-size:16px;
+	display:block;
+	margin-bottom: 10px;
+	
+
+}
+
+#menu a:hover{
+	color: #3498db;
+}
+
+
+
