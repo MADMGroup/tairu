@@ -1,255 +1,53 @@
-<?php 
-error_reporting(0);
-
-$change="";
-$i=1;
- 
-
- // define ("MAX_SIZE","400");
- function getExtension($str) {
-         $i = strrpos($str,".");
-         if (!$i) { return ""; }
-         $l = strlen($str) - $i;
-         $ext = substr($str,$i+1,$l);
-         return $ext;
- }
-
- $errors=0;
-  
-if(isset($_FILES['files'])){
- {
- $file=array();
-
-  foreach($_FILES['files']['tmp_name'] as $key => $tmp_name ){
-
-    $file_name = stripslashes($_FILES['files']['name'][$key]);
-    $file_size =$_FILES['files']['size'][$key];
-    $file_tmp =$_FILES['files']['tmp_name'][$key];
-    $file_type=strtolower(getExtension($file_name));
-
-
-
-
-
-
-
-     //$query="INSERT into upload_data (`USER_ID`,`FILE_NAME`,`FILE_SIZE`,`FILE_TYPE`) VALUES('$user_id','$file_name','$file_size','$file_type'); ";
-		
-		
- if (($file_type != "jpg") && ($file_type != "jpeg") && ($file_type != "png") && ($file_type != "gif")) 
- 		{
-		
- 			$change='<div class="msgdiv">Unknown Image extension </div> ';
- 			$errors=1;
- 		}
- 		else
- 		{
-
-
-
-/*if ($file_size > MAX_SIZE*1024)
-{
-	$change='<div class="msgdiv">You have exceeded the size limit!</div> ';
-	$errors=1;
-}
-*/
-
-if($file_type=="jpg" || $file_type=="jpeg" )
-{
-$src = imagecreatefromjpeg($file_tmp);
-
-}
-else if($file_type=="png")
-{
-$src = imagecreatefrompng($file_tmp);
-
-}
-else 
-{
-$src = imagecreatefromgif($file_tmp);
-}
-
-echo $scr;
-
-list($width,$height)=getimagesize($file_tmp);
-
-
-$tmp=imagecreatetruecolor($width,$height);
-
-
-$newwidth1=300;
-$newheight1=($height/$width)*$newwidth1;
-$tmp1=imagecreatetruecolor($newwidth1,$newheight1);
-
-imagecopyresampled($tmp,$src,0,0,0,0,$newwidth,$newheight,$width,$height);
-
-imagecopyresampled($tmp1,$src,0,0,0,0,$newwidth1,$newheight1,$width,$height);
-
-
-$file[$i] = "images/". $_FILES['files']['name'][$key];
-
-$file[$i+1] = "images_thumb/". $_FILES['files']['name'][$key];
-
-$i=$i+2;
-
-
-imagejpeg($tmp,"images/". $_FILES['files']['name'][$key],100);
-
-
-
-imagejpeg($tmp1,"images_thumb/". $_FILES['files']['name'][$key],100);
-if(!imagejpeg) $errors=i+2;
-
-imagedestroy($src);
-imagedestroy($tmp);
-imagedestroy($tmp1);
-}}
-
-}
-
-
-}
-
-//If no errors registred, print the success message
- if(isset($_POST['Submit']) && !$errors) 
- {
- 
-   // mysql_query("update {$prefix}users set img='$big',img_small='$small' where user_id='$user'");
- 	$change=' <div class="msgdiv">Image Uploaded Successfully!</div>';
- }
- 
-?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<meta content="en-us" http-equiv="Content-Language">
-
-    <title>picture demo</title>
-    
-   <link href=".css" media="screen, projection" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery_002.js"></script>
-<script type="text/javascript" src="js/displaymsg.js"></script>
-<script type="text/javascript" src="js/ajaxdelete.js"></script>
-    
-	 
-  <style type="text/css">
-  .help
-{
-font-size:11px; color:#006600;
-}
-body {
-     color: #000000;
- background-color:#999999 ;
-    background:#999999 url(<?php echo $user_row['img_src']; ?>) fixed repeat top left;
-	
-	
-	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; 
-	
-	}
-		.msgdiv{
-	width:759px;
-padding-top:8px;
-padding-bottom:8px;
-background-color: #fff;
-font-weight:bold;
-font-size:18px;-moz-border-radius: 6px;-webkit-border-radius: 6px;
-}
-#container{width:763px;margin:0 auto;padding:3px 0;text-align:left;position:relative; -moz-border-radius: 6px;-webkit-border-radius: 6px; background-color:#FFFFFF }
-</style>
-
-  </head><body>
-     <div align="center" id="err">
-<?php echo $change; ?>  </div>
-   <div id="space"></div>
-   
- 
-  
-  
-  
-  <div id="container" >
-    
-   <div id="con">
-   
-      
-      
-        <table width="502" cellpadding="0" cellspacing="0" id="main">
-          <tbody>
-            <tr>
-              <td width="500" height="238" valign="top" id="main_right">
-			 
-			  <div id="posts">
-
-          <?php
-
-echo (count($file));
-          for($counter=1;$counter<=count($file);$counter=$counter+2){
-
-               echo ('<img src="'.$file[$counter+1].'" alt="blah blah" />');
-
-               
-
-          }
-          ?>
-
-			  
-
-
-
-			    <form method="post" action="" enctype="multipart/form-data" name="form1">
-				<table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
-               <tr><Td style="height:25px">&nbsp;</Td></tr>
-		<tr>
-          <td width="150"><div align="right" class="titles">Picture 
-            : </div></td>
-          <td width="350" align="left">
-            <div align="left">
-              <input size="25" name="files[]" type="file" multiple style="font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10pt" class="box"/>
-			  
-              </div></td>
-			  
-        </tr>
-		<tr><Td></Td>
-		<Td valign="top" height="35px" class="help">Image maximum size <b>400 </b>kb</span></Td>
-		</tr>
-		<tr><Td></Td><Td valign="top" height="35px"><input type="submit" id="mybut" value="       Upload        " name="Submit"/></Td></tr>
-        <tr>
-          <td width="200">&nbsp;</td>
-          <td width="200"><table width="200" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="200" align="center"><div align="left"></div></td>
-                <td width="100">&nbsp;</td>
-              </tr>
-          </table></td>
-        </tr>
-      </table>
-				</form>
- 
-  
-			  
-			  
-			  </div>
-			  
-			  
-			  
-			  
-			  </td>
-            
-            </tr>
-          </tbody>
-     </table>
-      
-
-      
-    
-</div>
-       
-  </div>
-  
-
-    
-</body></html>
-
-
-<!-- 2mb limit upload -->
+_[ÁGJŸ~©‘Óïî.¨¹:ª¤ºû@½à‚`’Ò#$ˆ†¡uF Cál/…!	.Ğ ‚áaÚáÌ÷heL ŒkˆÁK¨H«(p[VáÇ 
+ƒuJ,‹Ş.²>	Jël,VGĞºT‚?‚%“zK‚aXI$Ab„[""“#än„…‘Ñr.‹ »a2:AD OéX ¬¬»Â•e„5¡Î8 [•Ù_Ç¡áÁU]%ä}UnÒ/§dr‘yº¦Pà•KÉÃ|h,¾íPÿÖ:“a‚©q±Òˆ‚
+Ú-ÖÄ|§OUò¢Ü¬ÉgÏ
+yÑîã)ÊŸ‚W•×¼-Û‡t¬.JA`¬Ú#Êà.//‚Ó„òş¡Š} @’@‚¿Ü!Dp˜&AcB4"a""r±…ˆ"º†)Ì8 ¼/iWŠ¨+’@•)¶W9PéG^ÄR¡~¹yÁHR1tGDy‚úĞU/\pGÁ;#v-GĞâ!¸øë@XŠ¸©*Ax ¯*7Oì µ;©à¡Áú„à‚ñh TqÊ‚‡(pDt‚/ÁîúÚIZi(è [‚iXA^ÙQí ‚Y^w¸ŠìwH$ïí¿¶G+µaB2<ô‚ùX	Æú°±ª•a¤±AHÏâ"Yœ§Hü}`ªpı¨ NàâÂğ@¬BÂTÊÀIB·•Õ{ˆ K”ê-^5PP[°¸ º„ª°ZYA.‹ê0WL.ë†.íAw‚	Z`†ÇÄqß
+ Ğ­Zç…±õÊ§Ø-èöYO@‚ò‡)Ô§àÛ
+}h'A£âºì0‚Õx ­‚ •}ßƒW@µãJã¯†Pà®­ —Û»`¡Vâ÷ğA
+&¸Ğ½ @ºI Xâ‚'­Ò	‚d}$-Çá\§IÓ,î-GWÁ`(TS·Å Aj°õGöÁ~ì/vè®ì/Ä+^.¶“Û„ì¬U_IwhpÁtûäÇÓm	Ã&EéúK¡Áßw«, „W«X CÓ# ½BYAxDqcşÄ,-‚
+˜*AØI‘×	w½\YN`‹¢›YFBæG#åÆGˆùò>GGÈñr#Äp¤x‘ÁPD|Œ‹ªkx$í8p¡a…¯
+Óì(|5ˆ×¼ì)Q:.‹l-D3FˆÂ*B#¢,Œ#èÂ*h£D_NT$qÊs¹İrœXA{ÊrœZ„C•vƒ*Á TÊ² §*
+‚ ¤‘)Ğ †˜ Â¼ KjV;UtáğP¨ìˆè/+q-Dt]Ñ#ÄtGäqâ‘ÈPdp’c…ÈAÈeLr‡,r‡8çĞqÊƒaÎ9NS”åYVPµUFÂ…â÷aZïVª#-zÖGĞ[SÜ¤F3ˆş+Œ-•ª•È™¦DDB@}¬07)Â@‚`•5û`¶0Ÿ·´„ U÷k`Ğ T]E‚ÑE®ZDp„xÈùâ>\ÈàxnGä|Èç-éwè ]à‚°‚İor9Ü{OÂ”ê®e°FGEÑXD")HÈpD‚ˆA0E¹PSÊ§;•{(r‡)Êâ¨W”’‚`¨PJ£ãÿ‹²:vGÂğ‚¼+ÅÜqEÑÈì2<Gdx‘ò>Gˆâ—EÑt]€şÌéïğH¨nt/Uƒ×ícĞ°¢VùP¸ I•1dt¥8&„DD8â"0è PâX@µ»İ!Cûô	0K+5é
+‡+# í‘MìQiR½_Dq§@#ÄGB^‘Ç*1‡XùÜ¡ÁSÙN,W0‚ŸÈèYáJs¹Pè¡Á%W…aŒ¬ˆı	„+Ş!´_ ¬»„uh8÷ ZĞ"èV	Å» ‚ŠMÜ-èV…&pö
+‹‚àÒZZœp@»Ç*-á‚ö]î*+oZYC‚à‚°‚Â
+Å,$@ÜS
+Á'ÁªÛà$@«­U¿]ÒB(ZÕWÁ&‚]ïoß¾±‡¾®+ºìa[îË ZÒ«½P]„W‚/«U}ş®*º†ê½^q ‚ÿxPÁ+Ûˆa2:¡ği$÷xû(pA`‚İ;½h+ªJV¸EË†Ú}Vqé4‚MV­_Á8aSŠ? Pì˜ÿ‹¥XA^)z°NZÔ§I ‚Gà‘û# Twã`•…=‚T®‚ë°Wjé8ºéa/T]¤'´‚
+Ü ½ğÁ8¤•+XîGÒ¸‚wğ’­°‹ß±wõÁohGP@¸¸ÛìÕïÔ$õÌ ¶‡Qò‡PåS©PSşÁAÒTÓ¾Û«°µ¿–ĞqEr´’I…Úñğ@•‚xvªè ®IR¤v0‚° ¡‚
+İ,.°i.…Âú[„Á29„Â@” šÇK¦Š…	}iw•
+ß\$cğúH$•0A^ @}¨îû¨*w«»xEÑ#á'W¿¸ÕCw8 »¸é(0‚ïôŸğ›u÷£=Ü ‚Ğ|$¿Š¤.Â	‘Òîì:ªØ@‡u¨RğA[#«ƒá„7»(pA½Ü$¾=Á8+ØSéï«ÃTĞŞ8võ½Hø UYX%»°µáz Aa ‚`Ÿ\A÷Å`…&-ÊRUm×o¼5ZÁ(4à‚î ¬ T~H.ñŞ“¾·ƒ†–¾ÂAªÂµ±Û#ÖA*w+¸AZâ8"èa^öAVÁ×H_-=tqÊ}ğZ„|$Tì.Ä ‡†’4ú*{õVG@³ºÙNTì+±KEE§tû#ä|%
+»¶(p‡”çºDs·µP²C­
+ëIHPì..GâÁ”8AcöÁYOˆˆŞï[ÅBîÜ ¼ã”åAP™Xª¤¥Dt©yXT »Ø*Pşúá¬} @µ»N4â»oÈú«Z¾Ü,z¦. RAÁ(ACsØ'Ò¨è*â—WA¦T¤‚˜ JTUÆ¯ÂTE‚pÈé`‚øUŞ;ı—_^ğ‚Š+^7—e}¦{İiª§JÓ‡t+@¿AmĞ"èY| SH"_+¼-Â0¬t IR¤<	…îW°„G±Æ½„ìªÈèà‚»ãÍ×Kº•eFåYC„ı„
++°@©.Ç±Èô„]Páª›­}„„ö£×I+WV*ÂeÉ´Áp„wŞ!_ãˆ­ NøÃ	‚¨l:,,ñXACd|ºIa$GCYOœr‡	ü,p‚JÈì;†GÓ
+0aFİşqÁ•İı*Æ¥>	Î(&®@8 ‚1ÿt>Áckøa[‚H _#Ad}r:+¾„!J'Aò=¢Cô–=
+B?-ü|E‚Ä/J">±#fwá°°@µ;®ÂX%L«;İŸ(qè …é
+¡Õ$Úq¼^úØ@¾„
+©PF5ÔaAã¤öÚĞ H0JLw÷K ¨ ¡áßÅA‡AVp‚#ı„¬(p•u(pTŠ°KaÂG<X ¡•Ë®Û~z_`“Œ Tál T\(H0U
+G0A‘è¿î°ˆè n‚ÊŞÒ,hĞwagp•°BL+@¼ =~ÂÅ‚Â­‚Ø»°J@¬ ˜*J¾ƒ# ¯ël-XP`e\4+ºåuáV‚ê·,X_ñ¤ôJ˜,+×n¥õaE‚Z¿º!‘ì ®>	Änš%ºÕ)Òú-hPGLˆˆ _(p‘Ü§¢óÆ)+{‚
+q>Şô•ğH šR «Uñ¬B]té#÷HG#ş©V:+ˆQ NÔ.ü¢CĞ»¸¢èä‡
+4,+qkjDt ´ØX¿µÎşwQa0áT§àó¿JwØ'×KÁûã[Ò?Úav"[Õ‚uMUR½JŠº¿H TGwwn\=ò<GôZkwzö­úøìéİGê;²n _ÿ_Û~ÿ@$‚JÇT(‚	…ŞVBÓ	+´áİè XjñÇ·G¦ø Të`”+\]ªA¥Ò„
+½"9ÒÑÁPA]…¾°L ¾	'Äv I²;	‚uù4µå:ÖÁ$FŒéÚËšì „$¥@H µ„ Ajì.4Â	°®X2‡»µk¤": Á`Á7zÄoiŞïk@‚»Á@‚Ò×‚l+„ëZ>ºA ‚º ˆè¨DtyÑôt]u†	íGüUv¤r’
+¾,H C B;f¤GÁ¶‰ªî°’¥@SJAC@¨0[P‚`¿œPA4	$qÊpAZÊaEÑ|2>G">GÌt]òèˆù|‘Ñ#ÄtGÈèˆùÑ¼—Ds/‘ÑÈùR;#ä|¿wÚ`ëÚNøA‚
+Ò
+üu§( ­«váTâ""Šœ…tŞ@@a½÷jÂ¾WØ^ñÆÜv	*TQ|dÛ%º	ıc†¨]¡œ@¯&Gê ‚şÜs¿e>Êr	Ú‚/*<¡Â1ô¢î²¹éS‹şòãÈúVM$,"ÁknG×tÈôˆ÷ÔßI9Ü$–(ò;‹#–Ş¾«\ãœpU	ñŞì‚)öŠ#¾ ] ‚ï¶á8j8 š²œ%ı…è µÖÁR.á‚ `•üiC[	ª+:{ûã¾ã]«ÂV¡Ã¶,¸·»á¯«Iò£ÜvR(uÊÅ¥Ó*l¡Êqÿ&	x`«uñRñAŞ¬'PôYN—•ªİ‚íuOPd~Ş»İ½+J m¬0˜AZ«	Õ}ü;¸Z‚Ä!T·ÇP‚An¸ˆ¯û‚aj‚_œACIû£-¼pAZ|Î.>¸APåXVãEşÓ„Å_IÕö›‘Ø@z«î’‚
+ĞA[¼PÁWkÙC‚¤·Ã
+ï¥‚ÁUş¬$÷aX¤ªÄEÄAT	…÷¸Kdt\¾ÅÃW„3ç}”9V¥@K`—T„
+¼+•ÿ+#¤”'v‚D{@¸„Şè":ïİ5‘Ñş	_`ƒA @„}Å…n-$#áàŸ@¨D/ˆ@7P‚ÁÁĞ,¨)Ò¼ğ®‘Çh¡M×	ò‡*5Ğ$SãÊŠ„‚m…¥†”%KÆİëğ‚Ş$‚(r²¡"=xAo]Ò‘Íáè"è/¡‘ò9-ÇÚD|[¡b2;l, ½¡ßWÁÒ‚„ø Y7ZÂIXAqáåB‚›®÷”şÂĞò¢sÓ§ÃºÂnÕ+Ò‡W°ÁVê¿Áv‰<nªG‚xU}n1ªbAØ]WnÂÕ°¬§A`jìn¬CâÃK°‚
+>»½Pv
+•öU8H%\*x.îéi¸İâ¼4Şé^Î8AZ±í%AÚ°N p·ØAi A ‚ÅA4—4‚…î/T/öGA$7µ# µ¡Ğ"İBBÂÆÚ)ÔD%„
+·Û‚	…¤qÊ{İJX‚Ó•i•~	&Ï€ˆÿ·íÈúİx°Cêâ¨êÖ,$ZB*	jşú·úÃR9‘Åáà‚.=V,)ÎÖã¡İ-mBI8 ™ğºHPG/ò£*ˆ ˜V¹â½œp‚ÛéZXîhEÆ°•ŞÂ«¶ÂüE”:A:¬PU|^0ÊÃ‚PACÕ+n´‚	"â$
+õ@ª¯ÅûÙ+·£¸Aoc8å ¢*èx‡eu§XQ—½„G²œ¡Áòl*ô,ÊËó¹C…í©{ÂìÙ¶¨ğÂ/§Ÿ# ¯‘õV.Á&‚8à‹Ú+v
+ğ‹¸ÓO@(ÒI|Bß°OÓˆZapøõTQ @²‡	
+ÒVÂÊ¼À>ÔëAP6 ­aÄ$îÚ@‚4ZÃÖ	RIAÂW
+‚Â
+Â†ì">¨8#+º†+Im·ÁÛ¸áB
+Á ñHA}„¡ÊéÙqÅ*İ&…òOãJÃ„]AÅVéocUÊpR¬Pö!e}‚ğÁöˆÚ÷{‘ğAX`¨p ‚‚BÊ´‘tGÖ‚ã+T:»ÈáØê•]ğ¬T\Š88ˆÇâÁ:[#ä|P$â´<2Ç)ÊŒğ§p@’"Ü¡ÊÌ%]'aU…w	
+¡Â@yX‚(pAX^‚#Öû"Î?× [Ğ@¿`°K}Gãô¸J©äs#‹	+>­éªÂ
+ oqè¡Ê€R¡ÂÚB"N®9Oñ]6GAw}sÉl½‚ÖTew”êù-X„½Õ‚
+õEŞ8é.°A§v
+ì+¯ùˆ#Æ5cöÂ´ÃAØÂÚ¤Xê"şş"9 A]A…è ‚P[ApA_â TwTwî1,§‡»ØT- J¨$‚×ãïwº/Hit¾G NG&	ÛÆôàPR;#¥KÖ/ÊdµRG°´â÷™# T´aÂğ‚ÁW·öÇ¶·?TB
+ö‡Gu”ÿ»wı/h+øa\¼î(ªPLAS[ºUq»»oª|$%+¡´H#:Ó
+×Õ] YV«¯×ü ˆè L`8IJÄ ­v	ÜRèpAX‹øŞ,/énàÁS^UÁ2¸( ¯s¢ç&ñ¯•e… l£¹W¬©{	¤åò8ä‡AûN•Aè ‚ş–ÁpG'ïA+`ˆAÁ-ÂÄ®¾"8ûÁãºˆìpğ‚3”à† ®Èèºî=»š&š @¨#âÑòáµjÊ ‚‹ŒJì/#êëd|¬:¿`ïpA0£¿×9ß	;uÁú­ÿ7ˆ B–âÁ.÷‘¾Â[}ÿ%Iè TïL*”8 UaAmÙY÷Séõ†*éx$·…íBì-¼%é%Ğ«—°¯P‘X¸ı	Ò0U{#ê·Qw#°T")m†B¸ÓVGK«Uõ¡Ú•6GK?`¶ ‚@–Á‚¡PWÒ]»è,ßHÁ¿NG@2‡ÜĞ_á±	ê’†	 ‚T97®¡b8ˆEÑ&›ğj¬/qı"…•6Â`²‡	#2>]ş>-RX©C‚U°Èè/ºô¥7¬ ¯¾}pîá‚K¡ÁdtACN•ĞaeÑğ@œ[ê¹}xIT$
+…É¼%ŠÂ@,Tq@„E…‹I0­ĞCğ=°Bx!GĞL&°@œî‘P
+Vé`zT“#¢è/ TQ•2œ$!§Ú„î"âõ¿İö`¨ˆ÷dtGA °dtGÃZiÑds¸w_ ®…aÁQÔR†-Á¥aYt]‘ÃxAxØX »p¥Zt¡Á
+÷°VÓ(r¸":%w§Ü8¤ÚøaZëåËéZH# A64‚
+Óê#J@´‚Z¥î8@©Â+à‚R	Ïè%”8 T/íÂñ waF·xú·a$®AïîİÇ¥»‘ÎÂ ¯èØ@µÛJè Akİ‚[Â,WVpAAÕ;Ã+Ò»OM»CúI…ª¥½PˆÔ;# ·"B"Á>Áx¥XKØ K¶ÒÒ(rœ¯Î8 JïSÀC\*£4l?¤
