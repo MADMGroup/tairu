@@ -1,1 +1,5 @@
 http://www.wiedzanaplus.pl/index.php?option=com_content&view=article&id=211%3Ajezyk-uml-wybrane-przyklady-projekt-systemu-cms&catid=102%3Auml&Itemid=60&showall=1
+
+http://webhosting.pl/Zarzadzanie.projektem.IT.Czesc.III.wykorzy_stanie.diagramow.UML
+
+http://webhosting.pl/files/groups/editors/programowanie/2009_07/zproj3/diagram_czynnosci.png
