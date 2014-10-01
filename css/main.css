@@ -19,8 +19,15 @@ a:visited { color: #fff; }
   width:100%;
   height:100%;
   background: transparent url(images/overlay.png) center center repeat ;
+<<<<<<< HEAD
   z-index:9997; 
   overflow:hidden;
+=======
+  display: table; 
+  z-index:9997; 
+  overflow:hidden;
+
+>>>>>>> origin/test_nao
 }
 .start {
   display: table;
@@ -64,8 +71,13 @@ a:visited { color: #fff; }
 	 
 
 }
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> origin/test_nao
 .watermark
 {
   position: absolute;
@@ -120,11 +132,18 @@ a:visited { color: #fff; }
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/test_nao
 
 
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/test_nao
 
 /**
  * Grid container
