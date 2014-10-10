@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Tairu - Login Panel</title>
+<title>Tairu</title>
 <link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/pa.css">
+<link rel="stylesheet" href="css/userpanel.css">
 
 </head>
 <body>
@@ -15,10 +15,10 @@
       <div class="blockInner">
         <div id="logo"><img src="css/images/logo.png"  /></div>
         
-        <form  id="login_form" method="get" action="">
-  <input type="email" placeholder="Email" />
-  <input type="password" placeholder="Password" />
-  <input type="submit" value="Log in" />
+        	<form action="checkuser.php?login=true" method="POST" id="login-form">
+  <input type="email" name="login" placeholder="Email"  required/>
+  <input  type="password" name="password" placeholder="Password"  required/>
+  <input type="submit" name="check" value="Log in" />
 </form>
        
     </div>
