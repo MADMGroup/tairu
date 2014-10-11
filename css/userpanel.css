@@ -27,6 +27,7 @@ html {
 .start .blockInner{
   margin: 0 auto; 
   width:250px;
+  text-align:center;
 }
 
 
@@ -134,6 +135,25 @@ input[type="submit"]:hover{
 
 #menu a:hover{
 	color: #3498db;
+}
+
+
+/*logout*/
+
+
+#loading {
+	display:table-cell;
+	width: 44px;
+	height: 44px;
+	background: url('images/loading_invert@2x.GIF') center center no-repeat;
+}
+.statement
+{
+	display: table-cell;
+vertical-align: middle;
+font-size:16px;
+height:44px;
+	
 }
 
 
