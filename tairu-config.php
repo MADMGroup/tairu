@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+﻿
 <!DOCTYPE html>
 <html lang="pl">
  <head>
@@ -77,5 +77,3 @@
  </section> 
 </body>
 </html>
-
->>>>>>> origin/test_nao
