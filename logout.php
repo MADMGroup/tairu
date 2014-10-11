@@ -62,7 +62,11 @@ if(isset($_SESSION['nick']) && isset($_SESSION['ip']))
 
 	  <?php
 
+<<<<<<< HEAD
 header( "Refresh:2; url=index.html", true, 303);
+=======
+header( "Refresh:2; url=login.php", true, 303);
+>>>>>>> origin/test_nao
 
 }
 
