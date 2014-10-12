@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="A9A33DC1-B4FF-B688-184E-3B21F301C786" name="photo" seqName="seg_0"/>
+   <object objectType="Table" objectID="8A80B4DF-ED11-8441-F92F-C24B274FE9DF" name="user" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="databasemodel" id="09DD3946-3F61-BD93-85F4-F97B3B9B335E" version="3.5">
+<createdBy>Damian</createdBy>
+<createdTime>2014-10-12 16:26:41 UTC</createdTime>
+<ownerDesignName>databasemodel</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>09DD3946-3F61-BD93-85F4-F97B3B9B335E</designId>
+</OSDM_Design>

@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A9A33DC1-B4FF-B688-184E-3B21F301C786" name="photo">
+<createdBy>Damian</createdBy>
+<createdTime>2014-10-12 17:27:49 UTC</createdTime>
+<generatorID>36E4F2EA-829F-AFDE-F72A-395ABA8A066F</generatorID>
+<ownerDesignName>databasemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="photo_id" id="E25F4C2F-2E42-A916-ABD8-9D7F9CBF30CF">
+<createdBy>Damian</createdBy>
+<createdTime>2014-10-12 17:27:49 UTC</createdTime>
+<generatorID>27362866-3EB9-589A-90E1-66E1CA732D68</generatorID>
+<ownerDesignName>databasemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="title" id="A49FE8B4-D8DE-FFF5-1915-980A5C7AC789">
+<createdBy>Damian</createdBy>
+<createdTime>2014-10-12 17:27:49 UTC</createdTime>
+<generatorID>3BCB0040-1C5B-B461-78CB-AC0BA5EB05BA</generatorID>
+<ownerDesignName>databasemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="B57CE45C-D854-EDA5-74C9-D3E7AC90B708">
+<createdBy>Damian</createdBy>
+<createdTime>2014-10-12 17:27:49 UTC</createdTime>
+<generatorID>C8A57771-0649-2631-B499-FDC01C4367C0</generatorID>
+<ownerDesignName>databasemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="path" id="BBC9AE61-6855-F90B-73C0-6302BEF6C1E6">
+<createdBy>Damian</createdBy>
+<createdTime>2014-10-12 17:27:49 UTC</createdTime>
+<generatorID>469C31A9-97FA-8058-6548-4C585319EC98</generatorID>
+<ownerDesignName>databasemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>MAX CHAR</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tag" id="B684EC60-E3CA-76BC-9575-7F0947214E0A">
+<createdBy>Damian</createdBy>
+<createdTime>2014-10-12 17:27:49 UTC</createdTime>
+<generatorID>9E810806-BBBF-C4CD-6020-7A98D8B934DB</generatorID>
+<ownerDesignName>databasemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4B77A7C4-0C54-5F9E-5F05-EA6E05026AA4" name="photo_PK">
+<createdBy>Damian</createdBy>
+<createdTime>2014-10-12 17:27:49 UTC</createdTime>
+<generatorID>12639220-0DF3-E1B8-3894-DEFBBEBF8B91</generatorID>
+<ownerDesignName>databasemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E25F4C2F-2E42-A916-ABD8-9D7F9CBF30CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
