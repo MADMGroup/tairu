@@ -235,15 +235,4 @@
 
 
 
-  //fixed panel x
-
-  window.pos = function() {
-    if (window.scrollX != null && window.scrollY != null) return { x: window.scrollX, y : window.scrollY };
-    else return { x: document.body.parentNode.scrollLeft, y : document.body.parentNode.scrollTop };
-  };
-
-  window.onscroll = function(e) {
-    document.getElementById('panel').style.left = window.pos().x + 'px';
-  };
-
 })(jQuery);     

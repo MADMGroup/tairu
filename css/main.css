@@ -97,8 +97,12 @@ a:visited { color: #fff; }
 	clear:both;
   position:relative;
   font-size: 16px;
-  color:#fff;
   width:250px;
+  
+}
+
+.desc a {
+  color:#fff;
   
 }
 
