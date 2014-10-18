@@ -1,5 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<oracle.dbtools.crest.model.design.logical.LogicalDesign>
-   <object objectType="Entity" objectID="36E4F2EA-829F-AFDE-F72A-395ABA8A066F" name="photo" seqName="seg_0"/>
-   <object objectType="Entity" objectID="5175DC4E-2FA3-3BDB-339F-B2958AAF68FD" name="user" seqName="seg_0"/>
-</oracle.dbtools.crest.model.design.logical.LogicalDesign>
