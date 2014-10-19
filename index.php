@@ -1,5 +1,4 @@
 <!doctype html>
-
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -28,40 +27,35 @@
 
 <div id="main" role="main">
   <ul id="tiles" >
-    <!-- These are our grid blocks -->
-    <li data-filter-class='["photo"]'> <a href="images/_MG_4819.JPG" rel="photo"> <img src="images_thumb/_MG_4819.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["print"]'> <a href="images/Show_Your_Darkness2.jpg" rel="print"> <img src="images_thumb/Show_Your_Darkness2.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/BlogPortfolio_Logo.jpg" rel="other"> <img src="images_thumb/BlogPortfolio_Logo.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["print"]'> <a href="images/NANO_2014.jpg" rel="print"> <img src="images_thumb/NANO_2014.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/Panel09.jpg" rel="other"> <img src="images_thumb/Panel09.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/Nario_Time_to_adventure.jpg" rel="other"> <img src="images_thumb/Nario_Time_to_adventure.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/Love_Fences.jpg" rel="other"> <img src="images_thumb/Love_Fences.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/Portfolio_Blog.jpg" rel="other"> <img src="images_thumb/Portfolio_Blog.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["video"]'> <a class="video" href="http://youtube.com/embed/aA0grDNTsjI?enablejsapi=1&wmode=opaque" rel="video">
-      <div class="watermark"></div>
-      <img src="http://img.youtube.com/vi/aA0grDNTsjI/0.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/Everything_IS_conected.jpg" rel="other"> <img src="images_thumb/Everything_IS_conected.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["photo"]'> <a href="images/_MG_4835.JPG" rel="photo"> <img src="images_thumb/_MG_4835.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["photo"]'> <a href="images/_MG_4919.JPG" rel="photo"> <img src="images_thumb/_MG_4919.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["photo"]'> <a href="images/_MG_4956.JPG" rel="photo"> <img src="images_thumb/_MG_4956.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["photo"]'> <a href="images/_MG_5005.JPG" rel="photo"> <img src="images_thumb/_MG_5005.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["photo"]'> <a href="images/_MG_5012.JPG" rel="photo"> <img src="images_thumb/_MG_5012.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["photo"]'> <a href="images/_MG_5195.JPG" rel="photo"> <img src="images_thumb/_MG_5195.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/BackgroundCircle.jpg" rel="other"> <img src="images_thumb/BackgroundCircle.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["print"]'> <a href="images/Death_Expectation.jpg" rel="print"> <img src="images_thumb/Death_Expectation.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/Dratewka_logo_Final.png" rel="other"> <img src="images_thumb/Dratewka_logo_Final.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["website"]'> <a href="images/Dratewka_website.png" rel="website"> <img src="images_thumb/Dratewka_website.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["website"]'> <a href="images/My_template_V3.jpg" rel="website"> <img src="images_thumb/My_template_V3.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["website"]'> <a href="images/My_template_V4.jpg" rel="website"> <img src="images_thumb/My_template_V4.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/NaoDesign_Wallpeper.jpg" rel="other"> <img src="images_thumb/NaoDesign_Wallpeper.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/NaoDesign_Wallpeper_2.jpg" rel="other"> <img src="images_thumb/NaoDesign_Wallpeper_2.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/NaoDesign_Wallpeper_3.jpg" rel="other"> <img src="images_thumb/NaoDesign_Wallpeper_3.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/NaoDesign_Wallpeper_2.jpg" rel="other"> <img src="images_thumb/NaoDesign_Wallpeper_2.jpg" width="100%" height="100%"> </a> </li>
-    <li data-filter-class='["other"]'> <a href="images/WSNHiD_Logo.png" rel="other"> <img src="images_thumb/WSNHiD_Logo.jpg" width="100%" height="100%"> </a> </li>
-    <!-- End of grid blocks -->
+
+    	<?php
+		
+		 include_once('config.php');
+		 $mysqli = new mysqli($db['host'], $db['user'], $db['password'], $db['database']);
+		 
+		  if($wynik = $mysqli -> query("SELECT path, filename FROM `photo`"))
+		  {
+			  
+			  
+			  while( $photo = $wynik->fetch_assoc())
+	{	
+
+			
+			echo '<li> <a href="' . $photo['path'] . $photo['filename'] .'"> <img src="' . $photo["path"] .'thumb_'. $photo["filename"] .'" width="100%" height="100%"></a> </li>';  
+	}
+	
+	/* Usuwamy wynik zapytania z pamięci */
+	$wynik->close();
+}
+
+/* Zamykamy połączenie z bazą */
+$mysqli->close();
+			  
+		  ?>
+		  
   </ul>
 </div>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script> 
+<script type="text/javascript" src="libs/jquery-1.8.3.min.js"></script> 
 <script src="libs/jquery.imagesloaded.js"></script> 
 <script src="libs/jquery.wookmark.js"></script> 
 <script type="text/javascript" src="libs/jquery.fancybox.js"></script> 

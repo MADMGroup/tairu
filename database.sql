@@ -62,7 +62,7 @@ INSERT INTO `photo` (`id_photo`, `title`, `description`, `path`, `filename`, `ta
 INSERT INTO `photo` (`id_photo`, `title`, `description`, `path`, `filename`, `tags`, `user_id_user`) VALUES (NULL, NULL, NULL, 'upload/9Fv2a6h392t8ST4L46850151C156PeR7_2014-10-18/', 'BlogPortfolio_Logo.jpg', NULL, 1);
 INSERT INTO `photo` (`id_photo`, `title`, `description`, `path`, `filename`, `tags`, `user_id_user`) VALUES (NULL, NULL, NULL, 'upload/9Fv2a6h392t8ST4L46850151C156PeR7_2014-10-18/', 'Death_Expectation.jpg', NULL, 1);
 INSERT INTO `photo` (`id_photo`, `title`, `description`, `path`, `filename`, `tags`, `user_id_user`) VALUES (NULL, NULL, NULL, 'upload/9Fv2a6h392t8ST4L46850151C156PeR7_2014-10-18/', 'Dratewka_logo_Final.png', NULL, 1);
-INSERT INTO `photo` (`id_photo`, `title`, `description`, `path`, `filename`, `tags`, `user_id_user`) VALUES (NULL, NULL, NULL, 'upload/9Fv2a6h392t8ST4L46850151C156PeR7_2014-10-18/', 'Dratewka_website.jpg', NULL, 1);
+INSERT INTO `photo` (`id_photo`, `title`, `description`, `path`, `filename`, `tags`, `user_id_user`) VALUES (NULL, NULL, NULL, 'upload/9Fv2a6h392t8ST4L46850151C156PeR7_2014-10-18/', 'Dratewka_website.png', NULL, 1);
 
 
 

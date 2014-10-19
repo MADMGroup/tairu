@@ -145,7 +145,7 @@ input[type="submit"]:hover{
 	display:table-cell;
 	width: 44px;
 	height: 44px;
-	background: url('images/loading_invert@2x.GIF') center center no-repeat;
+	background: url('images/loading@2x.GIF') center center no-repeat;
 }
 .statement
 {

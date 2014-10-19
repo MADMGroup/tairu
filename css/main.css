@@ -7,9 +7,7 @@ html {
 }
 
 a:visited { color: #fff; }
- a:hover { color: #3498db; }
- a[href^="mailto:"] {color: #fff; }
-  a[href^="mailto:"]:hover {color:  #3498db; }
+
  
 
 
@@ -38,7 +36,7 @@ a:visited { color: #fff; }
 .start .blockInner{
   margin: 0 auto; 
 
-  width:287px;
+  width:289px;
   height:278px;
   z-index:9998; 
 }
@@ -49,6 +47,7 @@ a:visited { color: #fff; }
   cursor:pointer;
   z-index:9998;
   position:relative;
+  border: 1px solid #000;
   width:250px;
   float:left;
    	margin: 0 5px 5px 0;
@@ -89,6 +88,7 @@ a:visited { color: #fff; }
   background:url(images/icons.png) no-repeat -60px 0;
   display:inline-block;
   background-size: 300%;
+  border: 1px solid #000;
 }
 
 
@@ -101,11 +101,10 @@ a:visited { color: #fff; }
   
 }
 
-.desc a {
-  color:#fff;
-  
-}
-
+.desc a { color:#000;}
+.desc a:hover { color: #3498db; }
+.desc a[href^="mailto:"] {color:#000; }
+.desc a[href^="mailto:"]:hover {color:  #3498db; }
 
 
 
