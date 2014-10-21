@@ -42,7 +42,7 @@ session_start();
 
    if(isset($_SESSION['nick']) && isset($_SESSION['ip']))
    {
-	echo '
+?>
     <div class="content">
   <div class="fake">
     <div id="pa">
@@ -54,8 +54,45 @@ session_start();
   </div>
   <div class="line"></div>
   <div class="line_2"></div>
- 
-</div>';
+  
+    	<?php
+		
+		 include_once('config.php');
+		 $mysqli = new mysqli($db['host'], $db['user'], $db['password'], $db['database']);
+		 
+		  if($wynik = $mysqli -> query("SELECT id_photo, path, filename FROM `photo`"))
+		  {
+			  
+			  
+			  while( $photo = $wynik->fetch_assoc())
+	{	
+			?>
+			<div class="image_block">
+   <div class="image_block_inner">
+   		<div class="checkbox">
+        <?php
+		echo '<input type="checkbox" id="'. $photo["id_photo"].'" /> <label for="'. $photo["id_photo"].'"></label></div>';
+        echo ' <span class="helper"></span><img class="image" src="' . $photo["path"] .'thumb_'. $photo["filename"] .'"/> </div></div>';
+
+	}
+	
+	/* Usuwamy wynik zapytania z pamięci */
+	$wynik->close();
+}
+
+/* Zamykamy połączenie z bazą */
+$mysqli->close();
+			  
+		  ?>
+  
+  
+  
+
+
+
+
+
+<?php
 
    }
    else

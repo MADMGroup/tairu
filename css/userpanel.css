@@ -82,9 +82,7 @@ input[type="submit"]:hover{
 .content
 {
 	position: relative;
-  width: 800px;
-  height: 1000px;
-  margin:30px 0 0 200px;
+  margin:30px 30px 0 200px;
 	
 }
 
@@ -135,6 +133,87 @@ input[type="submit"]:hover{
 
 #menu a:hover{
 	color: #3498db;
+}
+
+
+.image_block
+{
+	border:1px solid #000;
+	padding:10px;
+	width:200px;
+	float:left;
+	margin:15px;
+	
+}
+
+
+.image_block_inner
+{
+	position:relative;
+	height: 200px;      /* equals max image height */
+    width: 200px;
+	white-space: nowrap;
+    
+    text-align: center;
+}
+
+.image
+{
+	vertical-align: middle;
+    max-height: 200px;
+    max-width: 200px;
+
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+.checkbox{
+	z-index:2;
+	position:absolute;
+	background:#fff;
+	right:-22px;
+	top:-20px;
+	width:19px;
+    height:19px;
+}
+
+
+
+.wrapper {
+	width: 500px;
+	margin: 50px auto;
+}
+input[type=checkbox] {
+	display: none;
+}
+label:before {
+	content: "";
+	display: inline-block;
+
+	width: 16px;
+	height: 16px;
+
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background-color: #fff;
+	border:1px solid #000;
+}
+
+
+input[type=checkbox]:checked + label:before {
+	content: "x";
+	font-size: 15px;
+	font-weight:bold;
+	color: #000;
+	text-align: center;
+    line-height: 15px;
 }
 
 

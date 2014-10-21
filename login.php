@@ -1,3 +1,8 @@
+<?php
+ob_start();
+session_start();
+?>
+
 <!doctype html>
 
 <head>
@@ -9,6 +14,18 @@
 
 </head>
 <body>
+
+
+      <?php 
+
+   if(isset($_SESSION['nick']) && isset($_SESSION['ip']) && $_COOKIE['islogged'])
+   {
+	   header( "Refresh:0; url=userpanel.php", true, 303);
+	   
+   }
+   else
+   {
+	  ?>
 
   <div class="start">
     <div class="blockOuter">
@@ -25,8 +42,12 @@
   </div>
 </div>
 
-
-
+<?php
+}
+?>
 
 </body>
 </html>
+<?php
+ob_end_flush();
+?>

@@ -45,11 +45,27 @@ ob_start();
 
 	
 
-		
+		 if($mysqli -> connect_error){ ?>
+         
+            <div class="start">
+
+    <div class="blockOuter">
+
+
+	  		<div style="display:table;border-spacing:20px;margin:0 auto;">
+	  <div id="loading">	  </div>
+      
+  <div class="statement">Problem z połączeniem się z bazą danych. Trwa przekierowanie...</div>
+
+	  </div>
+
+	  </div>
+      </div>
      
 
-    		 header( "Refresh:2; url=login.php", true, 303); }
-
+       <?php header( "Refresh:2; url=login.php", true, 303); }
+	   else
+	   {
 	  
 
 		  $login     = trim(htmlspecialchars($mysqli -> real_escape_string($login)));
@@ -105,7 +121,8 @@ ob_start();
           <?php header( "Refresh:2; url=login.php", true, 303);
 
 		 }
-	   
+	   }
+	  }
 
 
 

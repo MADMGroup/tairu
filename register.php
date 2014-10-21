@@ -1,4 +1,13 @@
-﻿
+<?php
+////////////////////////////////////////////////////////////////
+// Author: Dominik Ryńko                                      //
+// Website: http://www.rynko.pl/                              //
+// Version: 1.1                                               //
+// Contact: http://www.rynko.pl/kontakt                       //    
+// Description: Adding new user to database                   //
+//                                        All Rights Reserved //
+////////////////////////////////////////////////////////////////
+?>
 <!DOCTYPE html>
 <html lang="pl">
  <head>
@@ -71,3 +80,4 @@
  </section> 
 </body>
 </html>
+
