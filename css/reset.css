@@ -7,9 +7,8 @@
  audio:not([controls]) { display: none; }
  [hidden] { display: none; }
 
- html { font-size: 100%; overflow: hidden; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
  body { margin: 0; font-size: 13px; }
- body, button, input, select, textarea {overflow: -moz-scrollbars-none;-ms-overflow-style: none;}
 /*
 ::-webkit-scrollbar { 
     display: none; 

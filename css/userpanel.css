@@ -40,7 +40,7 @@ html {
 }
 
 
-input[type="email"],input[type="password"]{
+.blockInner input[type="email"],input[type="password"]{
   width:92%;
   background:#fff;
   margin-bottom:4%;
@@ -50,7 +50,7 @@ input[type="email"],input[type="password"]{
   color:#000;
 }
 
-input[type="submit"]{
+.blockInner input[type="submit"]{
   width:100%;
   background:#000;
   border:0;
@@ -62,7 +62,7 @@ input[type="submit"]{
   -webkit-transition:background .3s;
 }
 
-input[type="submit"]:hover{
+.blockInner input[type="submit"]:hover{
   background:#3498db;
 }
 
@@ -79,10 +79,38 @@ input[type="submit"]:hover{
 	
 }
 
+
+.buttons{
+	height: 40px;
+ 	width:172px;
+    overflow: hidden;
+	  transition:background .3s;
+  -webkit-transition:background .3s;
+  float:right;
+  margin:30px 15px 100px 15px;	
+  cursor:pointer;
+}
+.buttons:hover rect{
+	fill: rgb(52,152,219);
+}
+
+
+
+div.buttons input {
+    display: block !important;
+    width: 172px !important;
+    height: 40px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+	  cursor:pointer;
+}
+
+
+
 .content
 {
 	position: relative;
-  margin:30px 30px 0 200px;
+  margin:30px 30px 100px 200px;
 	
 }
 
@@ -111,7 +139,8 @@ input[type="submit"]:hover{
 {
 	height:3px;
 	background:#000;
-	float:right;
+	right:0px;
+	position:absolute;
 	width:40px;
 	
 
@@ -140,8 +169,7 @@ input[type="submit"]:hover{
 {
 	border:1px solid #000;
 	padding:10px;
-	width:200px;
-	float:left;
+	display:inline-block;
 	margin:15px;
 	
 }
@@ -150,8 +178,8 @@ input[type="submit"]:hover{
 .image_block_inner
 {
 	position:relative;
-	height: 200px;      /* equals max image height */
-    width: 200px;
+	height: 167px;      /* equals max image height */
+    width: 150px;
 	white-space: nowrap;
     
     text-align: center;
@@ -160,8 +188,8 @@ input[type="submit"]:hover{
 .image
 {
 	vertical-align: middle;
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 167px;
+    max-width: 150px;
 
 }
 
@@ -213,7 +241,7 @@ input[type=checkbox]:checked + label:before {
 	font-weight:bold;
 	color: #000;
 	text-align: center;
-    line-height: 15px;
+    line-height: 13px;
 }
 
 
