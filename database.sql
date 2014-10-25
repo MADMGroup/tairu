@@ -40,14 +40,43 @@ CREATE TABLE IF NOT EXISTS `photo` (
   INDEX `fk_photo_user_idx` (`user_id_user` ASC),
   CONSTRAINT `fk_photo_user`
     FOREIGN KEY (`user_id_user`)
-    REFERENCES `mydb`.`user` (`id_user`)
+    REFERENCES `user` (`id_user`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARACTER SET = latin1;
 
 
+-- -----------------------------------------------------
+-- Table `usersetting`
+-- -----------------------------------------------------
 
-INSERT INTO `mydb`.`photo` (`id_photo`, `title`, `description`, `path`, `tags`, `1`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL);
+CREATE TABLE IF NOT EXISTS `usersetting` (
+  `id_usersetting` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `url` VARCHAR(200) NULL,
+  `user_id_user` INT UNSIGNED NOT NULL,
+  PRIMARY KEY (`id_usersetting`, `user_id_user`),
+  INDEX `fk_usersetting_user1_idx` (`user_id_user` ASC),
+  CONSTRAINT `fk_usersetting_user1`
+    FOREIGN KEY (`user_id_user`)
+    REFERENCES `user` (`id_user`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
+
+-- -----------------------------------------------------
+-- Data for table `usersetting`
+-- -----------------------------------------------------
+START TRANSACTION;
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'logo', 'css/images/logo.png', 1);
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'facebook', NULL, 1);
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'pdf', NULL, 1);
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'site', 'madmgroup.github.io/tairu', 1);
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'mail', '', 1);
+
+COMMIT;
+
 
 -- -----------------------------------------------------
 -- Drop table
@@ -56,4 +85,5 @@ INSERT INTO `mydb`.`photo` (`id_photo`, `title`, `description`, `path`, `tags`, 
 
 
 DROP TABLE IF EXISTS `user` ;
+DROP TABLE IF EXISTS `usersetting` ;
 DROP TABLE IF EXISTS `photo` ;
