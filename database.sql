@@ -34,10 +34,11 @@ CREATE TABLE IF NOT EXISTS `photo` (
   `title` VARCHAR(45) NULL,
   `description` VARCHAR(200) NULL,
   `path` VARCHAR(2048) NOT NULL,
+  `filename` VARCHAR(45) NOT NULL,
   `tags` VARCHAR(200) NULL,
-  `user_id_user` INT UNSIGNED NOT NULL,
-  PRIMARY KEY (`id_photo`, `user_id_user`),
-ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARACTER SET = latin1;
+  PRIMARY KEY (`id_photo`))
+ENGINE = InnoDB AUTO_INCREMENT = 1
+DEFAULT CHARACTER SET = latin1;
 
 
 -- -----------------------------------------------------
@@ -48,22 +49,19 @@ CREATE TABLE IF NOT EXISTS `usersetting` (
   `id_usersetting` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `url` VARCHAR(200) NULL,
-  `user_id_user` INT UNSIGNED NOT NULL,
-  PRIMARY KEY (`id_usersetting`, `user_id_user`),
-ENGINE = InnoDB
-AUTO_INCREMENT = 1;
+  PRIMARY KEY (`id_usersetting`))
+ENGINE = InnoDB AUTO_INCREMENT = 1
+DEFAULT CHARACTER SET = latin1;
 
 -- -----------------------------------------------------
 -- Data for table `usersetting`
 -- -----------------------------------------------------
-START TRANSACTION;
-INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'logo', 'css/images/logo.png');
-INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'facebook', NULL);
-INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'pdf', NULL);
-INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'site', 'madmgroup.github.io/tairu');
-INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`, `user_id_user`) VALUES (NULL, 'mail', '');
 
-COMMIT;
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`) VALUES (NULL, 'logo', 'css/images/logo.png');
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`) VALUES (NULL, 'facebook', NULL);
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`) VALUES (NULL, 'pdf', NULL);
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`) VALUES (NULL, 'site', 'madmgroup.github.io/tairu');
+INSERT INTO `usersetting` (`id_usersetting`, `name`, `url`) VALUES (NULL, 'mail', '');
 
 
 -- -----------------------------------------------------
