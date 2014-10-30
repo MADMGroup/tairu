@@ -13,16 +13,39 @@
 <body>
 <div id="blur">
   <div class="start">
-    <div class="blockOuter">
-      <div class="blockInner">
-        <div id="logo"><img src="css/images/logo.png"  /></div>
-        <div id="logonap"> <a href="https://www.facebook.com/naod3sign" target="_blank" class="icons"></a> <a href="#" target="_blank" class="icons" style="background:url(css/images/icons.png) no-repeat -30px;background-size: 300%;"></a> <a href="login.php" class="icons" style="background:url(css/images/icons.png) no-repeat;background-size: 300%;"></a> </div>
-        <div class="desc"><a href="http://madmgroup.github.io/tairu/">madmgroup.github.io/tairu</a><br/>
-          <a href="mailto:naod3sign@gmail.com">naod3sign(at)gmail.com</a></div>
+      <div class="blockInner" >
+      <?php
+      	 @include_once('tairu_database.php');
+		 $mysqli = @new mysqli($db['host'], $db['user'], $db['password'], $db['database']);
+		 
+		 
+		  if(!$mysqli -> connect_error)
+		  {
+			  $wynik = $mysqli -> query("SELECT url FROM `usersetting`");
+			  while( $row = $wynik->fetch_array(MYSQLI_NUM))
+			  
+			  {
+				
+				  $url[]=$row[0];
+			  }
+			  
+		  
+         ?>
+
+<img id="logo" src="<?=$url[0]?>"  />
+        <div id="logonap"> 
+         <?php if(!empty($url[1])){?><a href="<?=$url[1]?>" target="_blank" class="icons"></a>  
+		<?php }if(!empty($url[2])){?><a href="<?=$url[2]?>" target="_blank" class="icons" style="background:url(css/images/icons.png) no-repeat -30px;background-size: 300%;"></a><?php } ?> 
+        <a href="tairu_login.php" class="icons" style="background:url(css/images/icons.png) no-repeat;background-size: 300%;"></a> </div>
+         <div class="desc"><a href="<?=$url[3]?>"><?php $url[3]=str_replace(array('http://', 'https://'), '', $url[3]); echo $url[3];?></a><br/>
+      
+          <?php  if(!empty($url[4])){?><a href="mailto:<?=$url[4]?>"><?php 
+		  $url[4]=str_replace("@", '(at)', $url[4]); echo $url[4];?></a></div><?php }
+          
+         ?>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <div id="main" role="main">
@@ -30,8 +53,7 @@
 
     	<?php
 		
-		 include_once('config.php');
-		 $mysqli = new mysqli($db['host'], $db['user'], $db['password'], $db['database']);
+		$wynik->free();
 		 
 		  if($wynik = $mysqli -> query("SELECT path, filename FROM `photo`"))
 		  {
@@ -45,7 +67,7 @@
 	}
 	
 	/* Usuwamy wynik zapytania z pamięci */
-	$wynik->close();
+	$wynik->free();
 }
 
 /* Zamykamy połączenie z bazą */
@@ -55,6 +77,9 @@ $mysqli->close();
 		  
   </ul>
 </div>
+<?php }else echo '<div style="	width: 44px;
+	height: 44px;
+	background: url(\'css/images/loading@2x.GIF\') center center no-repeat;display:inline-block;float:left">	  </div><div style="margin:15px;display:inline-block;">System nieskonfigurowany lub błąd bazy danych. Aby skonfigurować przejdź do <a style="color:#000" href="tairu_config.php"><b>tairu_config.php</b> </a>. </div></div></div></div>'; ?>
 <script type="text/javascript" src="libs/jquery-1.8.3.min.js"></script> 
 <script src="libs/jquery.imagesloaded.js"></script> 
 <script src="libs/jquery.wookmark.js"></script> 
