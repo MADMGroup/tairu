@@ -1,0 +1,347 @@
+﻿<div>
+<style type="text/css">
+#user_field html, #user_field {
+ font-family:Myriad Pro Light;
+ font-size:18px;
+ text-align: center;
+ color:#000;
+ margin: 0;
+ padding: 0;
+ background-color:#FFF;
+}
+#user_field #center {
+ margin: 0 auto;
+ width:881px;
+}
+/*head*/
+
+#user_field #kontakt-line {
+ position:relative;
+ background-color:#e8e8e8;
+ width:100%;
+ min-width:960px;
+ height:30px;
+ margin:3px 0 0 0;
+ height:4px;
+}
+#user_field #kontakt-tab {
+ position:relative;
+ background-color:#e8e8e8;
+ display:inline-block;
+ float:right;
+ width:259px;
+ height:26px;6
+}
+
+#user_field .kontakt-tab-text {
+ margin: 4px 0 0 10px;
+ text-align:left;
+ color:#989797;
+ font-size:15px;
+ 
+}
+#user_field .kontakt-tab-text a {
+ text-decoration:none;
+ color:#9ab100;
+ font-size:15px;
+}
+/*menu*/
+
+
+#user_field #menu-bar {
+ position:relative;
+ display:inline-table;
+ width:202px;
+ height:293px;
+ margin:51px 0 0 0;
+ float:left;
+}
+#user_field .menu-bar-text {
+ text-align:right;
+ margin:58px 0 0 0;
+ z-index:2;
+ position:relative;
+}
+#user_field .menu-bar-text a {
+ text-decoration:none;
+ color:#000;
+ font-size:30px;
+}
+#user_field .menu-bar-text a:hover {
+ color:#b5c644;
+ font-size:30px;
+}
+/*top-coffee*/
+
+
+#user_field #top-coffee {
+ position: relative;
+ float:left;
+ margin:51px 0 0 0;
+ width:420px;
+ height:477px;
+}
+#user_field #cup {
+ position:relative;
+ width:420px;
+ height:420px;
+}
+#user_field #cup div {
+ position:absolute;
+}
+#user_field .base {
+ background-image: -moz-linear-gradient(left bottom, #ebebeb 0, #fdfdfd 100%);
+ background-image: -webkit-gradient(linear, left bottom, right top, from(#ebebeb), to(#fdfdfd));
+ background-image: -o-linear-gradient(left bottom, #ebebeb 0, #fdfdfd 100%);
+ background-image: linear-gradient(left bottom, #ebebeb 0, #fdfdfd 100%);
+}
+#user_field #base, #user_field #base_shadow {
+ width:400px;
+ height:400px;
+ -moz-border-radius:200px; /* Half the width & the height to make a perfect Circle */
+ -webkit-border-radius:200px;
+ border-radius:200px;
+}
+#user_field #base_gradient, #user_field #base_highlight {
+ width:370px;
+ height:370px;
+ -moz-border-radius:185px;
+ -webkit-border-radius:185px;
+ border-radius:185px;
+}
+#user_field #base {
+ left:20px;
+}
+#user_field #base_gradient {
+ top:15px;
+ left:35px;
+ background-image: -moz-linear-gradient(right top, #ebebeb 0, #fdfdfd 100%);
+ background-image: -webkit-gradient(linear, right top, left bottom, from(#ebebeb), to(#fdfdfd));
+ background-image: -o-linear-gradient(right top, #ebebeb 0, #fdfdfd 100%);
+ background-image: linear-gradient(right top, #ebebeb 0, #fdfdfd 100%);
+}
+#user_field #base_highlight {
+ background:#fff;
+ left:34px;
+ top:16px;
+}
+#user_field #base_shadow {
+ background:rgba(0, 0, 0, .3);
+ top:15px;
+ left:10px;
+}
+/* cup-style */
+
+#user_field #cup_base, #user_field #cup_shadow {
+ width:300px;
+ height:300px;
+ -moz-border-radius:150px;
+ -webkit-border-radius:150px;
+ border-radius:150px;
+}
+#user_field #cup_shadow, #user_field #hand_shadow {
+ background:rgba(0, 0, 0, .1);
+}
+#user_field #cup_shadow {
+ left:65px;
+ top:60px;
+}
+#user_field #cup_base {
+ top:50px;
+ left:70px;
+}
+#user_field #cup_gradient {
+ width:284px;
+ height:284px;
+ top:59px;
+ left:79px;
+ -moz-border-radius:142px;
+ -webkit-border-radius:142px;
+ border-radius:142px;
+ background-image: -moz-linear-gradient(right top, #dedede 0, #f9f9f9 100%);
+ background-image: -webkit-gradient(linear, right top, left bottom, from(#dedede), to(#f9f9f9));
+ background-image: -o-linear-gradient(right top, #dedede 0, #f9f9f9 100%);
+ background-image: linear-gradient(right top, #dedede 0, #f9f9f9 100%);
+}
+#user_field #coffee {
+ width:260px;
+ height:260px;
+ top:70px;
+ left:90px;
+ background-image: -moz-linear-gradient(right top, #221D17 0, #706458 100%);
+ background-image: -webkit-gradient(linear, right top, left bottom, from(#221D17), to(#706458));
+ background-image: -o-linear-gradient(right top, #221D17 0, #706458 100%);
+ background-image: linear-gradient(right top, #221D17 0, #706458 100%);
+ -moz-border-radius:130px;
+ -webkit-border-radius:130px;
+ border-radius:130px;
+}
+#user_field #gallery {
+ width:260px;
+ height:260px;
+ top:70px;
+ left:90px;
+ -moz-border-radius:136px;
+ -webkit-border-radius:136px;
+ border-radius:136px;
+ border-style:inset;
+ border:6px solid #c2d066;
+ margin:-6px;
+ overflow:hidden;
+}
+#user_field #gallery img {
+ width:260px;
+ height:260px;
+ -moz-border-radius:130px;
+ -webkit-border-radius:130px;
+ border-radius:130px;
+ display:block;
+}
+#user_field #hand, #user_field #hand_shadow {
+ width:80px;
+ height:40px;
+ -moz-border-radius:9px;
+ -webkit-border-radius:9px;
+ border-radius:9px;
+}
+#user_field #hand {
+ top:180px;
+ left:3px;
+ background-image: -moz-linear-gradient(right, #d4d4d4 0, #fcfcfc 100%);
+ background-image: -webkit-gradient(linear, right top, left top, from(#d4d4d4), to(#fcfcfc));
+ background-image: -o-linear-gradient(right, #d4d4d4 0, #fcfcfc 100%);
+ background-image: linear-gradient(right, #d4d4d4 0, #fcfcfc 100%);
+}
+#user_field #hand_shadow {
+ left:5px;
+ top:186px;
+ -moz-transform:rotate(190deg);
+ -webkit-transform:rotate(190deg);
+ transform:rotate(190deg);
+}
+/*pagination*/
+#user_field #pagination {
+ position:relative;
+ width:420px;
+ margin:15px auto;
+ text-align:center;
+ 
+ 
+}
+
+#user_field #pagination a {
+ 
+ background-image:url(http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/pp.png);
+ height:16px;
+ width:16px;
+ display:inline-block;
+ text-decoration:none;
+ 
+ 
+}
+
+#user_field #pagination a:hover {
+ background-image:url(http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/pp_l.png);
+ height:16px;
+
+}
+
+/*text-top*/
+
+
+#user_field #text-top {
+ position:relative;
+ float:left;
+ margin:29px 0 0 0;
+ display:inline-table;
+ font-size:18px;
+ width:259px;
+ height:292px;
+ color:#706f6f;
+ text-align:left;
+}
+/*stopka*/
+
+
+#user_field .stopka-tekst a {
+ text-decoration:none;
+ color:#9ab100;
+ margin:0 52px 0 0;
+}
+
+#user_field .stopka-tekst {
+ color:#dad7d7;
+ display:inline;
+
+}
+
+#user_field #stopka {
+ position:relative;
+ width:881px;
+ height:40px;
+ margin:0 auto;
+ display:inline-block;
+ text-align:center;
+ 
+}
+
+
+
+</style>
+<div id="kontakt-line"></div>
+<div id="center">
+<div id="kontakt-tab">
+   <div class="kontakt-tab-text">Kontakt email: <a href="mailto:zpierzch@interia.pl">zpierzch[at]interia.pl </a></div>
+  </div>
+   
+  <div id="menu-bar">
+    <div class="menu-bar-text" style="left:30px;"><a target="_blank" href="http://allegro.pl/my_page.php?uid=16577976">O mnie</a></div>
+    <div class="menu-bar-text" style="top:15px;"><a target="_blank" href="http://allegro.pl/show_user.php?uid=16577976">Moje <br />komentarze</a></div>
+    <div class="menu-bar-text" style="left:30px;top:15px;"><a target="_blank" href="http://allegro.pl/show_user_auctions.php?uid=16577976">Inne moje <br />aukcje</a></div>
+  </div>
+  <div id="top-coffee">
+    <div id="cup">
+ <div id="base_shadow"></div>
+  <div id="base" class="base"></div>
+  <div id="base_highlight"></div>
+  <div id="base_gradient"></div>
+  <div id="hand_shadow"></div>
+  <div id="cup_shadow"></div>
+  <div id="hand"></div>
+  <div id="cup_base" class="base"></div>
+  <div id="cup_gradient"></div>
+  <div id="coffee"></div>
+<div id="gallery"> 
+<a href="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18254.JPG" target="_blank"><img id="pic1" src="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18254.JPG" /></a>
+<a href="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18257.JPG" target="_blank"><img id="pic2" src="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18257.JPG" /></a>
+<a href="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18258.JPG" target="_blank"><img id="pic3" src="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18258.JPG" /></a>
+<a href="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18259.JPG" target="_blank"><img id="pic4" src="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18259.JPG" /></a> 
+<a href="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18265.JPG" target="_blank"><img id="pic5" src="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18265.JPG" /></a>
+<a href="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18266.JPG" target="_blank"><img id="pic6" src="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/sniadaniowka_purpura/SDC18266.JPG" /></a>
+</div>
+</div>
+<div id="pagination">
+    <!--foto1--> 
+    <a href="#pic1"></a>
+    <!--foto2--> 
+    <a href="#pic2"></a>
+    <!--foto3--> 
+    <a href="#pic3"></a>  
+    <!--foto4--> 
+    <a href="#pic4"></a>
+     <!--foto5--> 
+    <a href="#pic5"></a>
+     <!--foto6--> 
+    <a href="#pic6"></a>
+
+    </div>
+  </div>
+  <div id="text-top">
+    <div style="margin:58px 0 0 10px;">
+      <div style="font-size:18px;color:#000;"><strong>Witam na mojej aukcji.</strong></div>
+     Prezentuje ciekawą porcelanową śniadaniówkę Bawaria z I poł. XX w.. Bardzo szykowna, zdobiona kolorem purpury i złota. Filiżanka na złotej stopce. Bez uszkodzeń, stan idealny. Sygnowana znakiem Porzellanfabrik Oscar Schaller & Co. Nachfolger (1921 - ca. 1950). Średnica talerzyka 15 cm. Średnica talerzyka  deserowego 19,5 cm. Wysokość filiżanki ok.6 cm, śr. 10,3 cm.
+</div>
+  </div>
+  <div id="stopka"><img src="http://content.wuala.com/contents/nao580/Web-Design/My%20Template/v5/images/stopka_img.png" style="margin:0px 5px 0 0;display:inline;" width="20" height="16" /><div class="stopka-tekst"> All right reserved C 2012 by Nao-Design | <a href="mailto:naod3sign@gmail.com">naod3sign[at]gmail.com</a></div></div>
+
+</div>

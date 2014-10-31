@@ -1,0 +1,215 @@
+html, body {
+	color:#FFF;
+	background-image: url(images/bg.png);
+	background-repeat:repeat-x;
+	position:relative;
+	margin:0 auto;
+	width:960px;
+}
+#bg_ {
+	background-image:url(images/bg2.jpg);
+	background-repeat:no-repeat;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	width:960px;
+	height:852px;
+}
+#stopka-1_ {
+	background-image: url(images/stopka_1.png);
+	position:absolute;
+	left:0px;
+	top:952px;
+	width:89px;
+	height:72px;
+}
+#stopka-2_ {
+	position:absolute;
+	left:89px;
+	top:952px;
+	width:871px;
+	height:72px;
+}
+/*menu*/
+           
+#title_ {
+	background-image: url(images/title.png);
+	position:absolute;
+	left:0px;
+	top:92px;
+	width:574px;
+	height:142px;
+}
+#kontakt_ {
+	position:absolute;
+	left:594px;
+	top:92px;
+	width:366px;
+	height:142px;
+}
+#kontakt2_ {
+	background-image: url(images/kontakt.png);
+	position:absolute;
+	width:366px;
+	height:142px;
+	left:594px;
+	top:92px;
+	filter: alpha(opacity=100);
+	-moz-opacity: 1.0;
+	opacity: 1.0;
+}
+#userbg_ {
+	background-image: url(images/userbg.png);
+	position:absolute;
+	width:115px;
+	height:124px;
+}
+#user_ {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:115px;
+	height:124px;
+}
+#title2_ {
+	background-image: url(images/title2.png);
+	position:absolute;
+	left:89px;
+	top:332px;
+	width:284px;
+	height:37px;
+}
+#title2-over_ {
+	background-image: url(images/title2_over.png);
+	position:absolute;
+	left:373px;
+	top:340px;
+	width:10px;
+	height:29px;
+}
+#bonus {
+	position:absolute;
+	left:550px;
+	top:310px;
+	z-index:1;
+}
+#logo_ {
+	background-image: url(images/logo.png);
+	position:absolute;
+	left:577px;
+	top:340px;
+	width:295px;
+	height:281px;
+	z-index:2;
+}
+#main_ {
+	background-image: url(images/main.png);
+	position:absolute;
+	left:89px;
+	top:369px;
+	width:488px;
+	height:226px;
+	z-index:2;
+}
+#blood_ {
+	background-image: url(images/blood.png);
+	position:absolute;
+	left:479px;
+	top:870px;
+	width:166px;
+	height:82px;
+	z-index:1;
+}
+#add_ {
+	background-image: url(images/add.png);
+	position:absolute;
+	left:432px;
+	top:645px;
+	width:461px;
+	height:59px;
+}
+#other-stopka_ {
+	background-image: url(images/other_stopka.png);
+	position:absolute;
+	left:220px;
+	top:889px;
+	width:335px;
+	height:42px;
+	z-index:2;
+}
+#other-stopka_:hover {
+	background-image: url(images/other_stopka_active.png);
+	position:absolute;
+	left:220px;
+	top:889px;
+	width:335px;
+	height:42px;
+	z-index: 2;
+}
+#comments-stopka_ {
+	background-image: url(images/comments_stopka.png);
+	position:absolute;
+	left:594px;
+	top:889px;
+	width:335px;
+	height:42px;
+	z-index: 3;
+}
+#comments-stopka_:hover {
+	background-image: url(images/comments_stopka_active.png);
+	position:absolute;
+	left:594px;
+	top:889px;
+	width:335px;
+	height:42px;
+	z-index: 3;
+}
+/*text*/
+           
+p 
+{
+	font-family: Verdana;
+	font-size:11px;
+	color:#FFF;
+}
+h2 
+{
+	font-family: Tahoma;
+	font-size:16px;
+	color:#FFF;
+	font-weight: bold;
+	margin-bottom:10px;
+}
+.add {
+ color:#FFF;
+ font-family:Tahoma;
+ font-size:14px;
+}
+.stopka {
+ color:#313c40;
+ font-family:Tahoma;
+ font-size:13px;
+}
+.main2 {
+ color:#FFF;
+ font-family:Tahoma;
+ font-size:13px;
+}
+.title2 {
+ color:#FFF;
+ font-family:Tahoma;
+ font-size:18px;
+}
+.title {
+ font-family: Verdana;
+ font-size:24px;
+ color:#FFF;
+ font-weight: bold;
+}
+.titledown {
+ font-family: Verdana;
+ font-size:18px;
+ color:#c7c7c7;
+ font-weight: bold;
+}

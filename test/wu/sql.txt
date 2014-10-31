@@ -1,0 +1,58 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.4
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jan 19, 2014 at 12:40 PM
+-- Server version: 5.1.57
+-- PHP Version: 5.2.17
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `a2751338_wu`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `UZYTKOWNICY`
+--
+
+CREATE TABLE `UZYTKOWNICY` (
+  `user_id` int(30) NOT NULL AUTO_INCREMENT,
+  `user_login` varchar(50) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `user_pass` varchar(50) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `user_type` varchar(50) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=28 ;
+
+--
+-- Dumping data for table `UZYTKOWNICY`
+--
+
+INSERT INTO `UZYTKOWNICY` VALUES(1, 'nao', 'zaq', 'prac');
+INSERT INTO `UZYTKOWNICY` VALUES(2, 's19772', 'zxc', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(4, 'przemkla', 'xsw', 'prac');
+INSERT INTO `UZYTKOWNICY` VALUES(5, 's19522', 'asd', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(6, 's19231', 'qwe', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(7, 's19456', '123', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(8, 's25346', 'vbn', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(9, 's23784', 'fgh', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(10, 's11345', 'rty', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(11, 's13567', '456', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(12, 's16543', 'm,.', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(13, 's12122', 'jkl', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(14, 's16478', 'uio', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(15, 's18800', '789', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(16, 's14453', '987', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(17, 's11843', 'oiu', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(18, 's18224', 'lkj', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(19, 's19762', '.,m', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(20, 's11567', '654', 'student');
+INSERT INTO `UZYTKOWNICY` VALUES(21, 'darekbog', 'cde', 'prac');
+INSERT INTO `UZYTKOWNICY` VALUES(22, 'adamtwar', 'vfr', 'prac');
+INSERT INTO `UZYTKOWNICY` VALUES(23, 'annaber', 'bgt', 'prac');
+INSERT INTO `UZYTKOWNICY` VALUES(24, 'piotrdrup', 'nhy', 'prac');
+INSERT INTO `UZYTKOWNICY` VALUES(25, 'karzajc', 'mju', 'prac');
+INSERT INTO `UZYTKOWNICY` VALUES(26, 'alekspierw', ',ki', 'prac');

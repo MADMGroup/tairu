@@ -1,0 +1,190 @@
+html, body {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	text-align: center;
+	color:#000;
+	margin: 0;
+	padding: 0;
+	background-image: url(images/bg.gif);
+	background-repeat:repeat-x;
+}
+#center {
+	margin: 0 auto;
+	width:812px;
+}
+#head {
+	background-image: url(images/head.gif);
+	background-repeat:repeat-x;
+	width:100%;
+	min-width:960px;
+	height:30px;
+}
+#up {
+	position:relative;
+	display:inline-table;
+	margin: 31px 0 0 0;
+}
+#logo {
+	position:relative;
+	background-image: url(images/logo.gif);
+	width:212px;
+	float:left;
+	height:64px;
+}
+div.nav {
+	position:relative;
+	background:url(images/nav.png) no-repeat;
+	width:192px;
+	float:left;
+	height:48px;
+}
+div.nav:hover {
+	position:relative;
+	background:url(images/nav.png) no-repeat left -48px;
+	width:192px;
+	float:left;
+	height:48px;
+}
+div.window {
+	position:relative;
+	background-image: url(images/window_dota2.png);
+	margin: 26px 0 0 0;
+	width:268px;
+	height:405px;
+	display:inline-block;
+}
+#item {
+	position:relative;
+	background-image: url(images/item.png);
+	width:42px;
+	max-width:42px;
+	max-height:405px;
+	z-index:1;
+	float:left;
+	height:405px;
+}
+#item_2 {
+	position:relative;
+	background-image: url(images/item_2.gif);
+	width:245px;
+	display:table;
+	float:right;
+	margin:40px 0 0 0;
+	height:81px;
+}
+#item:hover {
+	position:relative;
+	max-width:240px;
+	max-height:405px;
+	background-image: url(images/item_a.png);
+	width:240px;
+	z-index:2;
+	float:left;
+	height:405px;
+}
+#item div.itemtext {
+	display:none;
+}
+#item:hover div.itemtext {
+	position:relative;
+	text-align:left;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+	z-index:2;
+	display: block;
+	height:405px;
+	margin:80px 50px 0 15px;
+}
+#stopka {
+	position:relative;
+	background-image: url(images/stopka.gif);
+	width:812px;
+	margin:28px 0 0 0;
+	float:left;
+	height:33px;
+}
+/*text*/
+
+.head {
+	color:#b9b9b9;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	float:right;
+	padding: 10px 0 0 0;
+}
+.logo {
+	position:absolute;
+	color:#505050;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:18px;
+	left:40px;
+	bottom: 0px;
+}
+.logo_2 {
+	position:relative;
+	color:#b9b9b9;
+	font-family:"Arial Narrow";
+	font-size:10px;
+	margin: 32px 10px 0 0;
+}
+.itemtext_2 {
+	position:relative;
+	display:table-cell;
+	vertical-align:middle;
+	text-decoration:none;
+	color:#fff;
+	text-align:center;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:12px;
+}
+.itemtext_ico {
+	position:relative;
+	display:table-cell;
+	vertical-align:middle;
+	color:#505050;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:13px;
+	text-align:left;
+}
+.itemtext_ico_2 {
+	color:#505050;
+	font-family:Tahoma, Geneva, sans-serif;
+	line-height:5px;
+	font-size:12px;
+}
+#up a {
+	text-decoration:none;
+	color:#fff;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:14px;
+	text-align:left;
+}
+#up a:hover {
+	color:#505050;
+	text-decoration:none;
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:14px;
+	text-align:left;
+}
+
+
+.stopka-text{
+	position:relative;
+	margin: 0 0 65px 0;
+	width:812px;
+	float:left;
+	height:18px;
+	color:#fe3701;
+	text-decoration:none;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	text-align:right;
+}
+
+.stopka-text_a {
+	color:#fe3701;
+	text-decoration:none;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	text-align:right;
+}

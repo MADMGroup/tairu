@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+body {
+    background: #2c3338;
+    color: #606468;
+    font: 87.5%/1.5em 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+#logo{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background: #ea4c4c;
+    border-radius: 50%;
+    margin: 50px auto 20px auto;
+    text-align: center;
+    display:table;
+}
+
+#logo  p{
+    display: table-cell;
+    vertical-align: middle;
+    font:40px bold 'Open Sans', Arial, sans-serif;
+    line-height:35px;
+    color:#FFF;
+    text-transform:uppercase;
+}
+
+
+
+
+
+input {
+    border: none;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 0;
+    -webkit-appearance: none;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.clearfix {  border: 0;margin: 0;
+             padding: 0;} 
+
+#login {
+    position: relative;
+    margin: 0 auto;
+    width: 280px;
+
+
+}
+
+#login_user{
+
+    height:12px;
+    width:12px;
+    background: url('user.png') no-repeat center;
+}
+
+#login_password{
+    height:12px;
+    width:12px;
+    background: url('pass.png') no-repeat center;
+}
+
+#login form span {
+    background-color: #363b41;
+    border-radius: 3px 0px 0px 3px;
+    color: #606468;
+    display: block;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+}
+
+#login form input {
+    height: 50px;
+}
+
+#login form input[type="text"], input[type="password"] {
+    background-color: #3b4148;
+    border-radius: 0px 3px 3px 0px;
+    color: #606468;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 198px;
+}
+
+#login form input[type="submit"] {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #ea4c4c;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    width: 280px;
+}
+
+#login form input[type="submit"]:hover {
+    background-color: #d44141;
+}
+
+#login > p {
+    text-align: center;
+}
+
+#login > p span {
+    padding-left: 5px;
+}
